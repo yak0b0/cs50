@@ -1,5 +1,5 @@
 def burrito():
-    dict = {
+    dicti = {
         "Baja Taco": 4.25,
         "Burrito": 7.50,
         "Bowl": 8.50,
@@ -11,14 +11,17 @@ def burrito():
         "Tortilla Salad": 8.00
     }
     try:
-        item = input("Item: ")
+        count = 0.00
+        while True:
+            item = input("Item: ")
+            changed_item = item.strip().lower().title()
+            for item in dicti:
+                if changed_item == item:
+                    count = float(count) + float(dicti[item])
+                    print(f"Total: ${count:.2f}")
     except EOFError:
-        print("\n")
+        print("")
         exit()
-# we are also going to have to strip().title() the txt, because the user might be tapped in the head
-# so we are going to try to find the item in the keys in the dict
-# using a loop
-# except KeyError
 
 
 burrito()
