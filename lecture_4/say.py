@@ -1,4 +1,4 @@
-import cowsay
+import cowsay  # installing packages the same as modules
 import sys
 
 if len(sys.argv) == 2:
