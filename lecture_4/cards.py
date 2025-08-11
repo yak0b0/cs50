@@ -4,7 +4,7 @@ cards = ["jack", "queen", "king"]
 
 
 def main():
-    random.seed(1)
+    random.seed(1)  # setting seed
     print(random.sample(cards, k=2))  # without replacements
     print(random.choices(cards, k=2))  # with replacement
     print(random.choice(cards))  # one card
