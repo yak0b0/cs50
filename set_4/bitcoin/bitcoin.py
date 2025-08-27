@@ -24,11 +24,7 @@ def check_command():
 def get_btc_price(btc_amount):
     try:
         response = requests.get(
-<<<<<<< HEAD
             "https://rest.coincap.io/v3/assets/bitcoin?apiKey=MY_API_KEY :)"
-=======
-            "https://rest.coincap.io/v3/assets/bitcoin?apiKey=52c956a3ec42dcc6316ec6edf43130d8d9941fde6ef90023aa2fe6e55f061769"
->>>>>>> temp-branch
         )
         response_json = response.json()
         btc_price_usd = response_json['data']['priceUsd']
